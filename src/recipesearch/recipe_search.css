@@ -1,0 +1,94 @@
+
+.text-smaller{
+    -fx-font-size: 11px;
+    -fx-font-family: "Avenir Book";
+}
+
+.text-larger{
+    -fx-font-size: 16px;
+    -fx-font-family: "Avenir Book";
+}
+
+.text-header-normal{
+    -fx-font-size: 16px;
+    -fx-font-family: "Avenir Book";
+    -fx-font-weight: bold;
+}
+
+.text-header-larger{
+    -fx-font-size: 20px;
+    -fx-font-family: "Avenir Book";
+    -fx-font-weight: bold;
+}
+
+.text-subheader{
+    -fx-font-size: 13px;
+    -fx-font-family: "Avenir Book";
+    -fx-font-weight: bold;
+}
+
+.logo{
+
+    -fx-font-size: 56px;
+    -fx-font-family: "Prisma";
+
+}
+
+.logo-twirl{
+
+    -fx-font-size: 64px;
+    -fx-font-family: "Airplanes in the Night Sky";
+    -fx-text-fill:  #FFAC33;
+    -fx-rotate: -20;
+
+}
+
+.detailedView-opacity{
+rgba(7f,7f,7f,0.2);
+
+}
+
+.anchorpane-opacity{
+    -fx-background-color: rgba(0,0,0,0.5);;
+
+}
+
+.testbg{
+    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) ,
+    1, 0.0 , 0 , 1);
+
+}
+
+.detailedView{
+
+    -fx-border-width: 40px;
+    -fx-border-color: rgba(0,0,0,0.5);
+
+
+}
+
+.imgDetailed {
+    border-radius: 15%;
+}
+
+
+
+.anchorpane-detailedView {
+    -fx-background-color: #DCDCDC;
+}
+
+/*.body {
+    background-color: rgba(ff,ff,ff);
+
+}*/
+
+.text-area{
+    -fx-background-color: #0000FF;
+} /* regeln gäller text-areans ram */
+
+
+search-pane-text-normal{
+
+
+
+}

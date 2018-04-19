@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RecipeSearch:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/RecipeSearch_jar</output-path>
+    <root id="archive" name="RecipeSearch.jar">
+      <element id="module-output" name="RecipeSearch" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/dist/lib/lab2-backend.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/lab2-backend.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

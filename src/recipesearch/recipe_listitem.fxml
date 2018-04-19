@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root id="recipe-list-item" maxHeight="138.0" minHeight="138.0" onMouseClicked="#onClick" styleClass="recipe-list-item" stylesheets="@recipe_listitem.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="recipeImage" fitHeight="138.0" fitWidth="135.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="recipeName" layoutX="144.0" layoutY="14.0" prefHeight="27.0" prefWidth="329.0" styleClass="text-larger" text="Label" AnchorPane.bottomAnchor="92.0" AnchorPane.leftAnchor="144.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font></Label>
+      <Label fx:id="recipeDescription" layoutX="152.0" layoutY="76.0" prefHeight="45.0" prefWidth="312.0" text="Label" wrapText="true" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="152.0" AnchorPane.rightAnchor="39.0" AnchorPane.topAnchor="76.0" />
+      <ImageView fx:id="ingredientImage" fitHeight="16.0" fitWidth="16.0" layoutX="153.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="153.0" AnchorPane.rightAnchor="356.0" AnchorPane.topAnchor="52.0" />
+      <ImageView fx:id="difficultyImage" fitHeight="16.0" fitWidth="64.0" layoutX="176.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="timerImage" fitHeight="16.0" fitWidth="16.0" layoutX="231.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="231.0" AnchorPane.rightAnchor="272.0" AnchorPane.topAnchor="51.0">
+         <image>
+            <Image url="@resources/icon_time.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="countryImage" fitHeight="32.0" fitWidth="32.0" layoutX="93.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="priceLabel" layoutX="317.0" layoutY="52.0" text="Label" />
+      <Label fx:id="recipeTime" layoutX="248.0" layoutY="52.0" text="Label" />
+   </children>
+</fx:root>

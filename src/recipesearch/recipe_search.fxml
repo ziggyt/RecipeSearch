@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="500.0" maxWidth="800.0" minHeight="500.0" minWidth="800.0" prefHeight="500.0" prefWidth="800.0" stylesheets="@recipe_search.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipesearch.RecipeSearchController">
+   <children>
+      <StackPane fx:id="recipeDetailPane" layoutX="-6.0" layoutY="-11.0" prefHeight="517.0" prefWidth="813.0" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="-11.0">
+         <children>
+            <AnchorPane onMouseClicked="#closeButtonMousePressed" prefHeight="500.0" prefWidth="800.0" styleClass="anchorpane-opacity">
+               <children>
+                  <AnchorPane layoutX="33.0" layoutY="37.0" maxHeight="532.0" maxWidth="841.0" minHeight="444.0" minWidth="738.0" onMouseClicked="#mouseTrap" prefHeight="444.0" prefWidth="748.0" styleClass="anchorpane-detailedView">
+                     <children>
+                        <ImageView fx:id="recipeImage" fitHeight="210.0" fitWidth="212.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="imgDetailed" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="522.0" AnchorPane.topAnchor="14.0" />
+                        <Label fx:id="ingredientsLabel" alignment="TOP_LEFT" layoutX="32.0" layoutY="266.0" prefHeight="180.0" prefWidth="175.0" styleClass="text-normal" text="Label" wrapText="true" />
+                        <ImageView fx:id="cuisineImageView" fitHeight="52.0" fitWidth="64.0" layoutX="150.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="servingsLabel" layoutX="32.0" layoutY="247.0" text="Label" />
+                        <Label layoutX="15.0" layoutY="222.0" styleClass="text-header-normal" text="Ingredienser" />
+                        <Label fx:id="recipeLabel" layoutX="282.0" layoutY="29.0" styleClass="text-header-larger" text="Label" />
+                        <ImageView fx:id="closeImageView" fitHeight="16.0" fitWidth="16.0" layoutX="689.0" layoutY="21.0" onMouseEntered="#closeButtonMouseEntered" onMouseExited="#closeButtonMouseExited" onMousePressed="#closeButtonMousePressed" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/icon_close.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="descriptionLabel" alignment="TOP_LEFT" layoutX="253.0" layoutY="104.0" prefHeight="67.0" prefWidth="452.0" text="Label" wrapText="true" />
+                        <Label layoutX="269.0" layoutY="175.0" styleClass="text-header-normal" text="Tillagning" />
+                        <Label fx:id="instructionsLabel" alignment="TOP_LEFT" layoutX="258.0" layoutY="204.0" prefHeight="233.0" prefWidth="483.0" text="Label" wrapText="true" />
+                        <ImageView fx:id="mainIngredientDetail" fitHeight="32.0" fitWidth="32.0" layoutX="294.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="difficultyDetail" fitHeight="32.0" fitWidth="64.0" layoutX="358.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="432.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/icon_time.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="timeDetailLabel" layoutX="451.0" layoutY="80.0" text="Label" />
+                        <Label fx:id="priceLabelDetail" layoutX="531.0" layoutY="80.0" text="Label" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <AnchorPane fx:id="totoPane" onMouseClicked="#stopAfrica" prefHeight="500.0" prefWidth="800.0" styleClass="anchorpane-opacity">
+         <children>
+            <AnchorPane layoutX="51.0" minHeight="463.0" minWidth="652.0" prefHeight="500.0" prefWidth="661.0" styleClass="anchorpane-detailedView">
+               <children>
+                  <ImageView fx:id="totoImage" fitHeight="500.0" fitWidth="675.0" onMouseClicked="#stopAfrica" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/serious.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Button fx:id="stopButton" ellipsisString="" layoutX="288.0" mnemonicParsing="false" onAction="#stopAfrica" prefHeight="29.0" prefWidth="472.0" style="-fx-background-color: #ff4343;" text="Stop Toto" AnchorPane.bottomAnchor="470.0" AnchorPane.leftAnchor="288.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="1.0" />
+      <SplitPane fx:id="searchPane" dividerPositions="0.35" prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ComboBox fx:id="ingredientBox" layoutX="110.0" layoutY="182.0" prefHeight="25.0" prefWidth="120.0" styleClass="text-smaller" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="141.0" text="Hitta ett recept som passar genom &#10;att ändra inställningarna nedan&#10;" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="323.0" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="141.0" />
+                  <Label alignment="CENTER_RIGHT" layoutX="-2.0" layoutY="185.0" prefHeight="19.0" prefWidth="109.0" styleClass="text-normal" text="Huvudingrediens:" />
+                  <Label alignment="CENTER_RIGHT" layoutX="7.0" layoutY="226.0" prefWidth="100.0" styleClass="text-normal" text="Kök:" />
+                  <Label alignment="CENTER_RIGHT" layoutX="7.0" layoutY="271.0" prefWidth="100.0" styleClass="text-normal" text="Svårighetsgrad:" />
+                  <ComboBox fx:id="cuisineBox" layoutX="110.0" layoutY="223.0" prefHeight="25.0" prefWidth="120.0" styleClass="text-smaller" />
+                  <RadioButton fx:id="diffIntermediate" alignment="CENTER_RIGHT" layoutX="110.0" layoutY="307.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="106.0" text="Mellan" />
+                  <RadioButton fx:id="diffEasy" alignment="CENTER_RIGHT" layoutX="110.0" layoutY="290.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Lätt" />
+                  <RadioButton fx:id="diffAll" alignment="CENTER_RIGHT" layoutX="110.0" layoutY="272.0" mnemonicParsing="false" text="Alla" />
+                  <RadioButton fx:id="diffHard" alignment="CENTER_RIGHT" layoutX="110.0" layoutY="324.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="93.0" text="Svår" />
+                  <Spinner fx:id="priceSpinner" layoutX="110.0" layoutY="359.0" prefHeight="25.0" prefWidth="93.0" styleClass="text-smaller" />
+                  <Label alignment="CENTER_RIGHT" layoutX="7.0" layoutY="362.0" prefWidth="100.0" styleClass="text-normal" text="Maxpris:" />
+                  <Label layoutX="209.0" layoutY="363.0" text="kr" />
+                  <Slider fx:id="timeSlider" layoutX="110.0" layoutY="408.0" max="150.0" min="10.0" prefHeight="24.0" prefWidth="156.0" showTickMarks="true" value="10.0">
+                     <effect>
+                        <Lighting bumpInput="$null">
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect></Slider>
+                  <Label alignment="CENTER_RIGHT" layoutX="7.0" layoutY="405.0" prefWidth="100.0" styleClass="text-normal" text="Maxtid:" />
+                  <Label fx:id="timeLabel" layoutX="152.0" layoutY="432.0" styleClass="text-smaller" text="20 Minuter" />
+                  <ImageView fitHeight="19.0" fitWidth="48.0" layoutX="128.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/icon_difficulty_easy.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="17.0" fitWidth="48.0" layoutX="129.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/icon_difficulty_medium.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="18.0" fitWidth="48.0" layoutX="129.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/icon_difficulty_hard.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="90.0" layoutX="8.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="recipeLogoLabel" layoutX="83.0" styleClass="logo" text="Recept" />
+                  <Label layoutX="168.0" layoutY="-1.0" styleClass="logo-twirl" text="Sök" />
+                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="130.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="432.0">
+                     <image>
+                        <Image url="@resources/icon_time.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="498.0" prefWidth="516.0">
+                     <content>
+                        <FlowPane fx:id="recipeFlowpane" prefHeight="500.0" prefWidth="515.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
